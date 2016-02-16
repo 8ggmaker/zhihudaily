@@ -1,0 +1,13 @@
+﻿<ion-view>
+    <ion-nav-bar class="bar-positive" align-title="center">
+        <ion-nav-back-button></ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-content overflow-scroll="true" padding="true" class="has-header">
+        <div ng-if="story.recommenders" class="box-recommender">推荐者：
+            <a href="#" target="_blank" ng-repeat="item in story.recommenders">
+                <img class="avatar-circle" src="{{item.avatar}}">
+            </a>
+        </div>
+        <div id="storycontent"></div>
+    </ion-content>
+</ion-view>

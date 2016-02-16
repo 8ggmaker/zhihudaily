@@ -1,0 +1,33 @@
+﻿<ion-view view-title="{{theme.name}}">
+<!--    <ion-nav-bar class="bar-positive" align-title="center">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+    </ion-nav-bar>-->
+    <ion-content class="no-header" style="top: 0;">
+        <div>
+            <div class="headline">
+                <div class="img-wrap">
+                    <h1 class="headline-title">{{theme.name}}
+                        <br>
+                        <span class="headline-description">{{theme.description}}</span>
+                    </h1>
+                    <span class="img-source">{{theme.image_source}}</span>
+                    <img class="zhihu-image-head" src="{{theme.background}}" alt="">
+                    <div class="img-mask"></div>
+                </div>
+            </div>
+            <div ng-if="theme.editors" class="box-recommender">主编：
+                <a ng-href="{{editor.url}}" target="_blank" title="{{editor.name}}{{editor.bio && '「' + editor.bio + '」'}}" ng-repeat="editor in theme.editors">
+                    <img class="avatar-circle" src="{{editor.avatar}}" alt="{{editor.name}}">
+                </a>
+            </div>
+            <div class="list-wrap">
+                <ion-list>
+                    <ion-item class="item item-thumbnail-left" ng-repeat="story in theme.stories" type="item-text-wrap" ng-href="#/app/singlestory/{{story.id}}">
+                        <img ng-if="story.images && story.images[0]" src="{{ story.images[0] }}" />
+                        <span class="item-text-wrap h4">{{ story.title }}</span>
+                    </ion-item>
+                </ion-list>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,26 @@
+<ion-view view-title="首页">
+<!--    <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+    </ion-nav-buttons>-->
+    <ion-content class="no-header" style="top: 0;">
+        <ion-slide-box on-slide-changed="slideHasChanged($index)">
+            <ion-slide ng-repeat="tpstory in tpstorylist">
+                <div class="box-tpstory">
+                    <h2 class="description-tpstory">{{tpstory.title}}</h2>
+                    <a href="#/app/singlestory/{{tpstory.id}}">
+                        <img class="img-tpstory" ng-src="{{tpstory.image}}" />
+                    </a>
+                </div>
+            </ion-slide>
+        </ion-slide-box>
+        <ion-list ng-repeat="storylist in storycontainer" id="{{storylist.date}}">
+            <div class="item item-divider">{{storylist.date}}</div>
+            <ion-item class="item item-thumbnail-left" ng-repeat="story in storylist.stories" type="item-text-wrap"
+            ng-href="#/app/singlestory/{{story.id}}">
+                <img ng-src="{{ story.images[0] }}" />
+                <span class="item-text-wrap h4">{{ story.title }}</span>
+            </ion-item>
+        </ion-list>
+        <ion-infinite-scroll ng-if="!noMoreItemsAvailable" on-infinite="loadmore()"></ion-infinite-scroll>
+    </ion-content>
+</ion-view>

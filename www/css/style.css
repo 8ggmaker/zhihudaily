@@ -1,0 +1,36 @@
+/* Empty. Add your own CSS if you like */
+  .box-recommender
+  {
+    margin: 10px;
+  }
+  .box-recommender a
+{
+	margin-right: .5em;
+	text-decoration: none;
+}
+.avatar-circle
+{
+  border-radius: 50%;
+  font-size: 100%;
+  width: 2em;
+}
+
+.box-tpstory
+{
+  font-size: 100%;
+}
+.img-tpstory
+{
+  width: 100%;
+  
+}
+.box-tpstory .description-tpstory
+{
+    bottom: 15px;
+    position: absolute;
+    font-size: 1.5em;
+    color: white;
+    line-height: 1.2em;
+    word-wrap:break-word;
+}
+
